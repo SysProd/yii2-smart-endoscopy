@@ -1,0 +1,150 @@
+{
+    "name": "SysProd/yii2-smart-endoscopy",
+    "description": "Smart hospital. Monitoring the cleaning process of endoscopic equipment.",
+    "keywords": ["yii2", "framework", "Smart hospital", "Smart Endoscopy", "Arduino"],
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SysProd Igor",
+            "email": "sys.prod@yahoo.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "~2.0.14",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+
+ 	    "kartik-v/yii2-widget-select2": "dev-master",
+        "kartik-v/yii2-helpers": "dev-master",
+        "kartik-v/yii2-mpdf": "dev-master",
+        "kartik-v/yii2-grid": "dev-master",
+        "kartik-v/yii2-builder": "dev-master",
+        "kartik-v/yii2-detail-view": "dev-master",
+        "kartik-v/yii2-money": "dev-master",
+        "kartik-v/yii2-icons": "dev-master",
+        "kartik-v/yii2-widgets": "dev-master",
+        "kartik-v/yii2-editable": "dev-master",
+        "kartik-v/yii2-nav-x": "dev-master",
+        "kartik-v/yii2-tabs-x": "dev-master",
+        "kartik-v/yii2-checkbox-x": "dev-master",
+        "kartik-v/yii2-widget-typeahead": "dev-master",
+        "kartik-v/yii2-date-range": "dev-master",
+        "kartik-v/yii2-export": "dev-master",
+        "kartik-v/yii2-dynagrid": "dev-master",
+        "kartik-v/yii2-tree-manager": "dev-master",
+
+        "igor162/AdminLteStyle": "dev-master",
+        "igor162/yii2-adminlte": "dev-master",
+        "igor162/yii2-nav": "dev-master",
+        "igor162/yii2-grid": "dev-master",
+        "igor162/yii2-dynagrid": "dev-master",
+        "igor162/yii2-tag-dependency-helper": "dev-master",
+        "igor162/yii2-modal": "dev-master",
+        "igor162/yii2-multiselect": "dev-master",
+        "igor162/yii2-removebutton-widget": "dev-master",
+        "igor162/yii2-jstree-input": "dev-master",
+        "igor162/yii2-jstree-widget": "dev-master",
+
+        "wbraganca/yii2-dynamicform": "^2.0"
+
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.1.0",
+        "yiisoft/yii2-gii": "~2.1.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+
+        "codeception/base": "~2.3.0",
+        "codeception/verify": "~0.4.0",
+        "codeception/specify": "~0.4.6",
+        "symfony/browser-kit": ">=2.7 <=4.2.4"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "yii\\composer\\Installer::postInstall"
+        ],
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject",
+            "yii\\composer\\Installer::postInstall"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ]
+        },
+        "yii\\composer\\Installer::postInstall": {
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+
+        {
+            "type": "git",
+            "url": "https://github.com/SysProd/yii2-adminlte"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/SysProd/yii2-nav"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/SysProd/yii2-grid"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/SysProd/yii2-dynagrid"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/SysProd/yii2-jstree-input"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/SysProd/yii2-jstree-widget"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/SysProd/yii2-adjacency-tree"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/SysProd/yii2-tag-dependency-helper"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/SysProd/yii2-removebutton-widget"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/SysProd/yii2-modal"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/SysProd/yii2-multiselect"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/SysProd/AdminLteStyle"
+        }
+    ]
+}
